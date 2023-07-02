@@ -1,10 +1,11 @@
 
 
 
-function button(){
+function Button(){
     return(
         <>
-            <button></button>
+            <button className=""></button>
         </>
     );
 }
+export default Button;
