@@ -22,7 +22,7 @@ let events = [
     borderColor: "#fdfffc",
   },
   {
-    title: "Computer Archeticture Tutorial",
+    title: "Computer Archeticture TutorialN",
     start: "2023-07-05T09:00:00",
     end: "2023-07-05T10:30:00",
     backgroundColor: "#fdfffc",
