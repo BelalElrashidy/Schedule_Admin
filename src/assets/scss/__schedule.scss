@@ -1,0 +1,40 @@
+.calendar {
+  background-color: $button;
+  color: white;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+}
+.fc {
+  border: none;
+  border-radius: 20px;
+  background-color: #e6e6e6;
+  .fc-daygrid-day-top {
+    padding: 20px;
+  }
+  .fc-daygrid-day-frame {
+    padding: 20px;
+  }
+  .fc-toolbar {
+    padding: 0 20px;
+  }
+}
+.fc-bg-event {
+  background-color: $secondary;
+  background: solid;
+  color: black;
+}
+.schedule {
+  border: none;
+
+  margin: 0 140px;
+  margin-top: 60px;
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  h1 {
+    padding-top: 20px;
+    padding-right: 100px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+.text {
+  h1 {
+    margin-bottom: 20px;
+    font-size: $bold;
+  }
+  p {
+    font-size: $regular;
+  }
+  margin: 0 140px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

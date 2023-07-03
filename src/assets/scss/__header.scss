@@ -1,0 +1,43 @@
+header {
+  height: 70px;
+  background-color: $primary;
+}
+nav {
+  margin: 0 140px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 143px;
+    }
+    background-color: $secondary;
+    width: 180px;
+    height: 44px;
+    border-radius: 16px;
+  }
+  .bar {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+    button {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      background: none;
+      border: none;
+    }
+    button:hover {
+      cursor: pointer;
+    }
+  }
+}
