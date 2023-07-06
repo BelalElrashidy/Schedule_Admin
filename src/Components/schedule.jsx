@@ -3,6 +3,7 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import timeGridPlugin from "@fullcalendar/timegrid"; // a plugin!
 import Button from "./buttons";
 import { useState } from "react";
+import { Calendar } from "fullcalendar";
 
 let events = [
   {
@@ -89,13 +90,15 @@ let events = [
 
 let headerToolbars = {
   left: "prev,next",
-  center: "title",
+  center: "title,addevent",
   right: "timeGridWeek,timeGridDay,WeekDay",
 };
 let views = {
   WeekDay: {
     type: "timeGrid",
-    duration: { days: 5 },
+    duration: { days: 7 },
+    weekends: false,
+    name: "Workdays",
   },
 };
 let slot = { slotDuration: "01:30" };
@@ -104,7 +107,7 @@ function Schedule() {
   return (
     <>
       <FullCalendar
-        height={650}
+        height={500}
         plugins={[timeGridPlugin]}
         initialView="timeGridWeek"
         viewClassNames="calendar"
