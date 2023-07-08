@@ -1,0 +1,217 @@
+id,coursename,instructor,room,from,to,type,day,date,subgroup,group
+1,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Monday,2023-07-03,B22-CS-01,BS - Year 1 
+2,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Monday,2023-07-03,B22-CS-01,BS - Year 1 
+3,Software Project ,Daniel Elambo Atonge,303,12:40,14:10,lab,Monday,2023-07-03,B22-CS-01,BS - Year 1 
+4,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Tuesday,2023-07-04,B22-CS-01,BS - Year 1 
+5,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-07-05,B22-CS-01,BS - Year 1 
+6,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Wednesday,2023-07-05,B22-CS-01,BS - Year 1 
+7,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-07-06,B22-CS-01,BS - Year 1 
+8,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Thursday,2023-07-06,B22-CS-01,BS - Year 1 
+9,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Friday,2023-07-07,B22-CS-02,BS - Year 1 
+10,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Friday,2023-07-07,B22-CS-02,BS - Year 1 
+11,Software Project ,Daniel Elambo Atonge,303,14:20,15:50,lab,Friday,2023-07-07,B22-CS-02,BS - Year 1 
+12,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Saturday,2023-07-08,B22-CS-02,BS - Year 1 
+13,Elective courses on Physical Education,,,09:00,10:30,Sports,Sunday,2023-07-09,B22-CS-02,BS - Year 1 
+14,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Sunday,2023-07-09,B22-CS-02,BS - Year 1 
+15,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-07-10,B22-CS-02,BS - Year 1 
+16,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Monday,2023-07-10,B22-CS-02,BS - Year 1 
+17,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Tuesday,2023-07-11,B22-CS-03,BS - Year 1 
+18,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Tuesday,2023-07-11,B22-CS-03,BS - Year 1 
+19,Software Project ,Marko Pezer,321,12:40,14:10,lab,Tuesday,2023-07-11,B22-CS-03,BS - Year 1 
+20,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Wednesday,2023-07-12,B22-CS-03,BS - Year 1 
+21,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-07-13,B22-CS-03,BS - Year 1 
+22,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Thursday,2023-07-13,B22-CS-03,BS - Year 1 
+23,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-07-14,B22-CS-03,BS - Year 1 
+24,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Friday,2023-07-14,B22-CS-03,BS - Year 1 
+25,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Saturday,2023-07-15,B22-CS-04,BS - Year 1 
+26,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Saturday,2023-07-15,B22-CS-04,BS - Year 1 
+27,Software Project ,Marko Pezer,321,14:20,15:50,lab,Saturday,2023-07-15,B22-CS-04,BS - Year 1 
+28,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Sunday,2023-07-16,B22-CS-04,BS - Year 1 
+29,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-07-17,B22-CS-04,BS - Year 1 
+30,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Monday,2023-07-17,B22-CS-04,BS - Year 1 
+31,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-07-18,B22-CS-04,BS - Year 1 
+32,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Tuesday,2023-07-18,B22-CS-04,BS - Year 1 
+33,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Wednesday,2023-07-19,B22-CS-05,BS - Year 1 
+34,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Wednesday,2023-07-19,B22-CS-05,BS - Year 1 
+35,Software Project ,Fahima Mokhtari,300,12:40,14:10,lab,Wednesday,2023-07-19,B22-CS-05,BS - Year 1 
+36,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Thursday,2023-07-20,B22-CS-05,BS - Year 1 
+37,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-07-21,B22-CS-05,BS - Year 1 
+38,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Friday,2023-07-21,B22-CS-05,BS - Year 1 
+39,Elective courses on Physical Education,,,09:00,10:30,Sports,Saturday,2023-07-22,B22-CS-05,BS - Year 1 
+40,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Saturday,2023-07-22,B22-CS-05,BS - Year 1 
+41,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Sunday,2023-07-23,B22-CS-06,BS - Year 1 
+42,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Sunday,2023-07-23,B22-CS-06,BS - Year 1 
+43,Software Project ,Fahima Mokhtari,300,14:20,15:50,lab,Sunday,2023-07-23,B22-CS-06,BS - Year 1 
+44,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Monday,2023-07-24,B22-CS-06,BS - Year 1 
+45,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-07-25,B22-CS-06,BS - Year 1 
+46,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Tuesday,2023-07-25,B22-CS-06,BS - Year 1 
+47,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-07-26,B22-CS-06,BS - Year 1 
+48,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Wednesday,2023-07-26,B22-CS-06,BS - Year 1 
+49,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Thursday,2023-07-27,B22-DSAI-01,BS - Year 1 
+50,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Thursday,2023-07-27,B22-DSAI-01,BS - Year 1 
+51,Software Project ,Munir Makhmutov,314,12:40,14:10,lab,Thursday,2023-07-27,B22-DSAI-01,BS - Year 1 
+52,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Friday,2023-07-28,B22-DSAI-01,BS - Year 1 
+53,Elective courses on Physical Education,,,09:00,10:30,Sports,Saturday,2023-07-29,B22-DSAI-01,BS - Year 1 
+54,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Saturday,2023-07-29,B22-DSAI-01,BS - Year 1 
+55,Elective courses on Physical Education,,,09:00,10:30,Sports,Sunday,2023-07-30,B22-DSAI-01,BS - Year 1 
+56,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Sunday,2023-07-30,B22-DSAI-01,BS - Year 1 
+57,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Monday,2023-07-31,B22-DSAI-02,BS - Year 1 
+58,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Monday,2023-07-31,B22-DSAI-02,BS - Year 1 
+59,Software Project ,Munir Makhmutov,314,14:20,15:50,lab,Monday,2023-07-31,B22-DSAI-02,BS - Year 1 
+60,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Tuesday,2023-08-01,B22-DSAI-02,BS - Year 1 
+61,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-08-02,B22-DSAI-02,BS - Year 1 
+62,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Wednesday,2023-08-02,B22-DSAI-02,BS - Year 1 
+63,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-08-03,B22-DSAI-02,BS - Year 1 
+64,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Thursday,2023-08-03,B22-DSAI-02,BS - Year 1 
+65,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Friday,2023-08-04,B22-DSAI-03,BS - Year 1 
+66,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Friday,2023-08-04,B22-DSAI-03,BS - Year 1 
+67,Software Project ,Alexey Potyomkin,303,16:00,17:30,lab,Friday,2023-08-04,B22-DSAI-03,BS - Year 1 
+68,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Saturday,2023-08-05,B22-DSAI-03,BS - Year 1 
+69,Elective courses on Physical Education,,,09:00,10:30,Sports,Sunday,2023-08-06,B22-DSAI-03,BS - Year 1 
+70,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Sunday,2023-08-06,B22-DSAI-03,BS - Year 1 
+71,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-08-07,B22-DSAI-03,BS - Year 1 
+72,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Monday,2023-08-07,B22-DSAI-03,BS - Year 1 
+73,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Tuesday,2023-08-08,B22-DSAI-04,BS - Year 1 
+74,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Tuesday,2023-08-08,B22-DSAI-04,BS - Year 1 
+75,Software Project ,Marko Pezer,321,16:00,17:30,lab,Tuesday,2023-08-08,B22-DSAI-04,BS - Year 1 
+76,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Wednesday,2023-08-09,B22-DSAI-04,BS - Year 1 
+77,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-08-10,B22-DSAI-04,BS - Year 1 
+78,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Thursday,2023-08-10,B22-DSAI-04,BS - Year 1 
+79,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-08-11,B22-DSAI-04,BS - Year 1 
+80,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Friday,2023-08-11,B22-DSAI-04,BS - Year 1 
+81,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Sunday,2023-08-13,В21-SD-01,BS - Year 1 
+82,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-08-14,В21-SD-01,BS - Year 1 
+83,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-08-15,В21-SD-01,BS - Year 1 
+84,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Thursday,2023-08-17,В21-SD-02,BS - Year 1 
+85,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-08-18,В21-SD-02,BS - Year 1 
+86,Elective courses on Physical Education,,,09:00,10:30,Sports,Saturday,2023-08-19,В21-SD-02,BS - Year 1 
+87,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Monday,2023-08-21,В21-SD-03,BS - Year 1 
+88,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-08-22,В21-SD-03,BS - Year 1 
+89,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-08-23,В21-SD-03,BS - Year 1 
+90,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Friday,2023-08-25,В21-CS-01,BS - Year 1 
+91,Elective courses on Physical Education,,,09:00,10:30,Sports,Saturday,2023-08-26,В21-CS-01,BS - Year 1 
+92,Elective courses on Physical Education,,,09:00,10:30,Sports,Sunday,2023-08-27,В21-CS-01,BS - Year 1 
+93,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Tuesday,2023-08-29,В21-DS-01,BS - Year 1 
+94,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-08-30,В21-DS-01,BS - Year 1 
+95,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-08-31,В21-DS-01,BS - Year 1 
+96,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Saturday,2023-09-02,В21-DS-02,BS - Year 1 
+97,Elective courses on Physical Education,,,09:00,10:30,Sports,Sunday,2023-09-03,В21-DS-02,BS - Year 1 
+98,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-09-04,В21-DS-02,BS - Year 1 
+99,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Wednesday,2023-09-06,В21-AI-01,BS - Year 1 
+100,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-09-07,В21-AI-01,BS - Year 1 
+101,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-09-08,В21-AI-01,BS - Year 1 
+102,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Sunday,2023-09-10,В21-RO-01,BS - Year 1 
+103,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-09-11,В21-RO-01,BS - Year 1 
+104,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-09-12,В21-RO-01,BS - Year 1 
+105,Venture Capital and Growth Hacking,Sinan Ibrahim,421 (STARTS ON 19/06),12:40,14:10,lab,Friday,2023-09-29,M22-TE-01 (30),BS - Year 1 
+106,Venture Capital and Growth Hacking,Sinan Ibrahim,421 (STARTS ON 19/06),14:20,15:50,lab,Friday,2023-09-29,M22-TE-01 (30),BS - Year 1 
+107,Venture Capital and Growth Hacking,Sinan Ibrahim,300 (ONLY ON 12/07),10:40,12:10,lab,Sunday,2023-10-01,M22-TE-01 (30),BS - Year 1 
+108,Venture Capital and Growth Hacking,Sinan Ibrahim,300 (ONLY ON 12/07),12:40,14:10,lab,Sunday,2023-10-01,M22-TE-01 (30),BS - Year 1 
+109,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Tuesday,2023-10-03,B22-CS-01,BS - Year 2
+110,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Tuesday,2023-10-03,B22-CS-01,BS - Year 2
+111,Software Project ,Daniel Elambo Atonge,303,12:40,14:10,lab,Tuesday,2023-10-03,B22-CS-01,BS - Year 2
+112,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Wednesday,2023-10-04,B22-CS-01,BS - Year 2
+113,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-10-05,B22-CS-01,BS - Year 2
+114,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Thursday,2023-10-05,B22-CS-01,BS - Year 2
+115,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-10-06,B22-CS-01,BS - Year 2
+116,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Friday,2023-10-06,B22-CS-01,BS - Year 2
+117,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Saturday,2023-10-07,B22-CS-02,BS - Year 2
+118,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Saturday,2023-10-07,B22-CS-02,BS - Year 2
+119,Software Project ,Daniel Elambo Atonge,303,14:20,15:50,lab,Saturday,2023-10-07,B22-CS-02,BS - Year 2
+120,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Sunday,2023-10-08,B22-CS-02,BS - Year 2
+121,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-10-09,B22-CS-02,BS - Year 2
+122,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Monday,2023-10-09,B22-CS-02,BS - Year 2
+123,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-10-10,B22-CS-02,BS - Year 2
+124,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Tuesday,2023-10-10,B22-CS-02,BS - Year 2
+125,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Wednesday,2023-10-11,B22-CS-03,BS - Year 2
+126,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Wednesday,2023-10-11,B22-CS-03,BS - Year 2
+127,Software Project ,Marko Pezer,321,12:40,14:10,lab,Wednesday,2023-10-11,B22-CS-03,BS - Year 2
+128,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Thursday,2023-10-12,B22-CS-03,BS - Year 2
+129,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-10-13,B22-CS-03,BS - Year 2
+130,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Friday,2023-10-13,B22-CS-03,BS - Year 2
+131,Elective courses on Physical Education,,,09:00,10:30,Sports,Saturday,2023-10-14,B22-CS-03,BS - Year 2
+132,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Saturday,2023-10-14,B22-CS-03,BS - Year 2
+133,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Sunday,2023-10-15,B22-CS-04,BS - Year 2
+134,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Sunday,2023-10-15,B22-CS-04,BS - Year 2
+135,Software Project ,Marko Pezer,321,14:20,15:50,lab,Sunday,2023-10-15,B22-CS-04,BS - Year 2
+136,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Monday,2023-10-16,B22-CS-04,BS - Year 2
+137,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-10-17,B22-CS-04,BS - Year 2
+138,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Tuesday,2023-10-17,B22-CS-04,BS - Year 2
+139,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-10-18,B22-CS-04,BS - Year 2
+140,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Wednesday,2023-10-18,B22-CS-04,BS - Year 2
+141,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Thursday,2023-10-19,B22-CS-05,BS - Year 2
+142,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Thursday,2023-10-19,B22-CS-05,BS - Year 2
+143,Software Project ,Fahima Mokhtari,300,12:40,14:10,lab,Thursday,2023-10-19,B22-CS-05,BS - Year 2
+144,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Friday,2023-10-20,B22-CS-05,BS - Year 2
+145,Elective courses on Physical Education,,,09:00,10:30,Sports,Saturday,2023-10-21,B22-CS-05,BS - Year 2
+146,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Saturday,2023-10-21,B22-CS-05,BS - Year 2
+147,Elective courses on Physical Education,,,09:00,10:30,Sports,Sunday,2023-10-22,B22-CS-05,BS - Year 2
+148,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Sunday,2023-10-22,B22-CS-05,BS - Year 2
+149,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Monday,2023-10-23,B22-CS-06,BS - Year 2
+150,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Monday,2023-10-23,B22-CS-06,BS - Year 2
+151,Software Project ,Fahima Mokhtari,300,14:20,15:50,lab,Monday,2023-10-23,B22-CS-06,BS - Year 2
+152,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Tuesday,2023-10-24,B22-CS-06,BS - Year 2
+153,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-10-25,B22-CS-06,BS - Year 2
+154,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Wednesday,2023-10-25,B22-CS-06,BS - Year 2
+155,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-10-26,B22-CS-06,BS - Year 2
+156,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Thursday,2023-10-26,B22-CS-06,BS - Year 2
+157,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Friday,2023-10-27,B22-DSAI-01,BS - Year 2
+158,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Friday,2023-10-27,B22-DSAI-01,BS - Year 2
+159,Software Project ,Munir Makhmutov,314,12:40,14:10,lab,Friday,2023-10-27,B22-DSAI-01,BS - Year 2
+160,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Saturday,2023-10-28,B22-DSAI-01,BS - Year 2
+161,Elective courses on Physical Education,,,09:00,10:30,Sports,Sunday,2023-10-29,B22-DSAI-01,BS - Year 2
+162,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Sunday,2023-10-29,B22-DSAI-01,BS - Year 2
+163,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-10-30,B22-DSAI-01,BS - Year 2
+164,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Monday,2023-10-30,B22-DSAI-01,BS - Year 2
+165,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Tuesday,2023-10-31,B22-DSAI-02,BS - Year 2
+166,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Tuesday,2023-10-31,B22-DSAI-02,BS - Year 2
+167,Software Project ,Munir Makhmutov,314,14:20,15:50,lab,Tuesday,2023-10-31,B22-DSAI-02,BS - Year 2
+168,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Wednesday,2023-11-01,B22-DSAI-02,BS - Year 2
+169,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-11-02,B22-DSAI-02,BS - Year 2
+170,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Thursday,2023-11-02,B22-DSAI-02,BS - Year 2
+171,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-11-03,B22-DSAI-02,BS - Year 2
+172,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Friday,2023-11-03,B22-DSAI-02,BS - Year 2
+173,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Saturday,2023-11-04,B22-DSAI-03,BS - Year 2
+174,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Saturday,2023-11-04,B22-DSAI-03,BS - Year 2
+175,Software Project ,Alexey Potyomkin,303,16:00,17:30,lab,Saturday,2023-11-04,B22-DSAI-03,BS - Year 2
+176,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Sunday,2023-11-05,B22-DSAI-03,BS - Year 2
+177,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-11-06,B22-DSAI-03,BS - Year 2
+178,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Monday,2023-11-06,B22-DSAI-03,BS - Year 2
+179,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-11-07,B22-DSAI-03,BS - Year 2
+180,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Tuesday,2023-11-07,B22-DSAI-03,BS - Year 2
+181,Software Project  ,Nursultan Askarbekuly,108,09:00,10:30,lec,Wednesday,2023-11-08,B22-DSAI-04,BS - Year 2
+182,Software Project  ,Nursultan Askarbekuly,108,10:40,12:10,tut,Wednesday,2023-11-08,B22-DSAI-04,BS - Year 2
+183,Software Project ,Marko Pezer,321,16:00,17:30,lab,Wednesday,2023-11-08,B22-DSAI-04,BS - Year 2
+184,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 20/06,27/06)",10:40,12:10,lec,Thursday,2023-11-09,B22-DSAI-04,BS - Year 2
+185,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-11-10,B22-DSAI-04,BS - Year 2
+186,Theoretical sports -Mental Health,Eleonora Ilina,"108 (ONLY ON 21/06,28/06)",10:40,12:10,lec,Friday,2023-11-10,B22-DSAI-04,BS - Year 2
+187,Elective courses on Physical Education,,,09:00,10:30,Sports,Saturday,2023-11-11,B22-DSAI-04,BS - Year 2
+188,Theoretical sports -Mental Health,Eleonora Ilina,108 (ONLY ON 22/06),10:40,12:10,lec,Saturday,2023-11-11,B22-DSAI-04,BS - Year 2
+189,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Monday,2023-11-13,В21-SD-01,BS - Year 2
+190,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-11-14,В21-SD-01,BS - Year 2
+191,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-11-15,В21-SD-01,BS - Year 2
+192,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Friday,2023-11-17,В21-SD-02,BS - Year 2
+193,Elective courses on Physical Education,,,09:00,10:30,Sports,Saturday,2023-11-18,В21-SD-02,BS - Year 2
+194,Elective courses on Physical Education,,,09:00,10:30,Sports,Sunday,2023-11-19,В21-SD-02,BS - Year 2
+195,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Tuesday,2023-11-21,В21-SD-03,BS - Year 2
+196,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-11-22,В21-SD-03,BS - Year 2
+197,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-11-23,В21-SD-03,BS - Year 2
+198,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Saturday,2023-11-25,В21-CS-01,BS - Year 2
+199,Elective courses on Physical Education,,,09:00,10:30,Sports,Sunday,2023-11-26,В21-CS-01,BS - Year 2
+200,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-11-27,В21-CS-01,BS - Year 2
+201,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Wednesday,2023-11-29,В21-DS-01,BS - Year 2
+202,Elective courses on Physical Education,,,09:00,10:30,Sports,Thursday,2023-11-30,В21-DS-01,BS - Year 2
+203,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-12-01,В21-DS-01,BS - Year 2
+204,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Sunday,2023-12-03,В21-DS-02,BS - Year 2
+205,Elective courses on Physical Education,,,09:00,10:30,Sports,Monday,2023-12-04,В21-DS-02,BS - Year 2
+206,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-12-05,В21-DS-02,BS - Year 2
+207,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Thursday,2023-12-07,В21-AI-01,BS - Year 2
+208,Elective courses on Physical Education,,,09:00,10:30,Sports,Friday,2023-12-08,В21-AI-01,BS - Year 2
+209,Elective courses on Physical Education,,,09:00,10:30,Sports,Saturday,2023-12-09,В21-AI-01,BS - Year 2
+210,Capstone Project ,Rustam Lukmanov,107( room 105 on 20/06-18/07),10:40,12:10,lec,Monday,2023-12-11,В21-RO-01,BS - Year 2
+211,Elective courses on Physical Education,,,09:00,10:30,Sports,Tuesday,2023-12-12,В21-RO-01,BS - Year 2
+212,Elective courses on Physical Education,,,09:00,10:30,Sports,Wednesday,2023-12-13,В21-RO-01,BS - Year 2
+213,Venture Capital and Growth Hacking,Sinan Ibrahim,421 (STARTS ON 19/06),12:40,14:10,lab,Saturday,2023-12-30,M22-TE-01 (30),BS - Year 2
+214,Venture Capital and Growth Hacking,Sinan Ibrahim,421 (STARTS ON 19/06),14:20,15:50,lab,Saturday,2023-12-30,M22-TE-01 (30),BS - Year 2
+215,Venture Capital and Growth Hacking,Sinan Ibrahim,300 (ONLY ON 12/07),10:40,12:10,lab,Monday,2024-01-01,M22-TE-01 (30),BS - Year 2
+216,Venture Capital and Growth Hacking,Sinan Ibrahim,300 (ONLY ON 12/07),12:40,14:10,lab,Monday,2024-01-01,M22-TE-01 (30),BS - Year 2

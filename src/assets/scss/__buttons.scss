@@ -17,13 +17,18 @@ button {
   color: white;
   border: 1px solid $border;
 }
+.button:hover {
+  cursor: pointer;
+}
 .small {
   width: 200px;
   column-gap: 10px;
 }
 .large {
-  width: 600px;
+  width: 45%;
   padding: 0 60px;
+  column-gap: 10px;
+
   justify-content: space-between;
 }
 .selections {

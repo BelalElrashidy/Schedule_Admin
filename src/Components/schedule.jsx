@@ -8,53 +8,17 @@ import { Calendar } from "fullcalendar";
 let events = [
   {
     title: "Math Analysis 2 Lecture",
-    start: "2023-07-04T09:00:00",
-    end: "2023-07-04T10:30:00",
-    backgroundColor: "#fdfffc",
-    textColor: "#000000",
-    borderColor: "#fdfffc",
-  },
-  {
-    title: "Software Project Tutorial",
-    start: "2023-07-03T10:40:00",
-    end: "2023-07-03T12:10:00",
-    backgroundColor: "#fdfffc",
-    textColor: "#000000",
-    borderColor: "#fdfffc",
-  },
-  {
-    title: "Computer Archeticture TutorialN",
-    start: "2023-07-05T09:00:00",
-    end: "2023-07-05T10:30:00",
-    backgroundColor: "#fdfffc",
-    textColor: "#000000",
-    borderColor: "#fdfffc",
-  },
-  {
-    title: "Math Analysis 2 Lab",
-    start: "2023-07-04T12:40:00",
-    end: "2023-07-04T14:10:00",
-    backgroundColor: "#fdfffc",
-    textColor: "#000000",
-    borderColor: "#fdfffc",
-  },
-  {
-    title: "Software Project Lecture",
-    start: "2023-07-03T09:00:00",
-    end: "2023-07-03T10:30:00",
-    backgroundColor: "#fdfffc",
-    textColor: "#000000",
-    borderColor: "#fdfffc",
-  },
-  {
-    title: "Math Analysis 2 tutorial",
-    start: "2023-07-04T10:40:00",
-    end: "2023-07-04T12:10:00",
-    backgroundColor: "#fdfffc",
-    textColor: "#000000",
-    borderColor: "#fdfffc",
+    startTime: "09:00:00",
+    endTime: "10:30:00",
+
+    daysOfWeek: ["2"],
+    startRecur: "2023-07-03",
+    endRecur: "2023-08-04",
   },
 ];
+function add(start, end, alldays) {
+  console.log(start);
+}
 // let headerToolbars = {
 //   left: "prev,next",
 //   center: "title",
@@ -90,8 +54,8 @@ let events = [
 
 let headerToolbars = {
   left: "prev,next",
-  center: "title,addevent",
-  right: "timeGridWeek,timeGridDay,WeekDay",
+  center: "title",
+  right: "timeGridWeek,timeGridDay,WeekDay,dayGridMonth",
 };
 let views = {
   WeekDay: {
@@ -103,10 +67,13 @@ let views = {
 };
 let slot = { slotDuration: "01:30" };
 
-function Schedule() {
+function Schedule({ events }) {
   return (
     <>
       <FullCalendar
+        // defaultTimedEventDuration={{ duration: "01:30" }}
+        // slotDuration={"01:30"}
+        // slotDuration={"01:00"}
         height={500}
         plugins={[timeGridPlugin]}
         initialView="timeGridWeek"
@@ -116,6 +83,10 @@ function Schedule() {
         duration={{ default: "01:30" }}
         allDaySlot={false}
         events={events}
+        editable={true}
+        // selectable={true}
+        selectHelper={true}
+        select={add}
       />
     </>
   );

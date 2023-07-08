@@ -1,6 +1,7 @@
 .calendar {
   background-color: $button;
   color: white;
+
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border: none;
@@ -26,7 +27,8 @@
 }
 .schedule {
   border: none;
-
+  position: relative;
+  z-index: 0;
   margin: 0 140px;
   margin-top: 60px;
   background-color: #e6e6e6;
@@ -37,4 +39,9 @@
     padding-right: 100px;
     text-align: center;
   }
+}
+.events {
+  background-color: #fdfffc;
+  color: #000000;
+  border-color: "#fdfffc";
 }
