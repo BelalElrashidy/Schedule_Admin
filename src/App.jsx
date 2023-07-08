@@ -3,34 +3,35 @@ import Header from "./Components/Header.jsx";
 import Button from "./Components/buttons.jsx";
 import Schedule from "./Components/schedule.jsx";
 import "./assets/css/main.css";
+import "react-datetime/css/react-datetime.css";
 import Modal from "./Components/modal.jsx";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import DropButton from "./Components/dropbutton.jsx";
 import Selector from "./Components/DropModal.jsx";
 import Datetime from "react-datetime";
+import moment from "moment";
 
-function fetchDataFromCSV(file) {
-  fetch(file)
-    .then((response) => response.text())
-    .then((csvText) => {
-      const csvRows = csvText.split("\n");
+// function fetchDataFromCSV(file) {
+//   fetch(file)
+//     .then((response) => response.text())
+//     .then((csvText) => {
+//       const csvRows = csvText.split("\n");
 
-      // Process each row
-      csvRows.forEach((row) => {
-        const columns = row.split(",");
-        // Access each column value and perform desired operations
-        console.log(columns);
-      });
-    })
-    .catch((error) => {
-      console.error("Error fetching CSV file:", error);
-    });
-}
+//       // Process each row
+//       csvRows.forEach((row) => {
+//         const columns = row.split(",");
+//         // Access each column value and perform desired operations
+//         console.log(columns);
+//       });
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching CSV file:", error);
+//     });
+// }
 
-// Usage example
-fetchDataFromCSV("SummerSchedule.csv");
-
-const events = [
+// // Usage example
+// fetchDataFromCSV("SummerSchedule.csv");
+var events = [
   {
     title: "Math Analysis 2 Lecture",
     startTime: "09:00:00",
@@ -43,10 +44,25 @@ const events = [
     endRecur: "2023-08-01",
   },
 ];
-const event = () => {
-  return events;
-};
 function App() {
+  // const event = () => {
+  //   return events;
+  // };
+  const [events, setEvents] = useState([
+    {
+      title: "Math Analysis 2 Lecture",
+      startTime: "09:00:00",
+      endTime: "10:30:00",
+      backgroundColor: "#fdfffc",
+      textColor: "#000000",
+      borderColor: "#fdfffc",
+      daysOfWeek: ["2"],
+      startRecur: "2023-07-01",
+      endRecur: "2023-08-01",
+    },
+  ]);
+  const CalendarRef = useRef(null);
+
   const Group = [
     { value: "Select Group", label: "Select Group" },
     { value: "CS-01", label: "CS-01" },
@@ -84,6 +100,41 @@ function App() {
   function SubjectOpen() {
     subjectIsOpen(true);
   }
+  const AddEvent = (event) => {
+    const updatedEvents = [
+      ...events,
+      {
+        title: event.title,
+        startTime:
+          moment(event.startTime).toDate().getHours() +
+          ":" +
+          moment(event.startTime).toDate().getMinutes() +
+          ":00",
+        endTime:
+          moment(event.endTime).toDate().getHours() +
+          ":" +
+          moment(event.endTime).toDate().getMinutes() +
+          ":00",
+        backgroundColor: "#fdfffc",
+        textColor: "#000000",
+        borderColor: "#fdfffc",
+        daysOfWeek: ["2"],
+        startRecur: "2023-07-01",
+        endRecur: "2023-08-01",
+      },
+    ];
+    console.log(updatedEvents);
+
+    setEvents((preEvents) => updatedEvents);
+    console.log(events);
+    // console.log(moment(event.endTime).toDate());
+    // console.log(
+    //   moment(event.startTime).toDate().getHours() +
+    //     ":" +
+    //     moment(event.startTime).toDate().getMinutes() +
+    //     ":00"
+    // );
+  };
 
   return (
     <>
@@ -118,16 +169,16 @@ function App() {
             data={Course}
             setIsOpen={GroupOpen}
           />
-          <button>Notify Students Now</button>
+          {/* <button>Notify Students Now</button> */}
         </div>
       </div>
       <div className="schedule">
         <h1>The Schedule</h1>
-        <Schedule events={events} />
+        <Schedule events={events} CalendarRef={CalendarRef} />
       </div>
       {isOpen && (
         <div id="MyModal">
-          <Modal setIsOpen={setIsOpen} />
+          <Modal setIsOpen={setIsOpen} AddEvent={(event) => AddEvent(event)} />
         </div>
       )}
       {year && (
@@ -145,7 +196,6 @@ function App() {
           <Selector setIsOpen={subjectIsOpen} data={Course} />
         </div>
       )}
-      <Datetime />
     </>
   );
 }

@@ -8,12 +8,26 @@ function Modal({ setIsOpen, AddEvent }) {
   const [Name, setName] = useState("");
   const [course, setCourse] = useState("");
   const [group, setGroup] = useState("");
-  // Get the modal
-  function onSubmit(event) {
-    event.preventDefault();
-    AddEvent({ title, Name, start, end, room, course, group });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    AddEvent({
+      title,
+      start,
+      end,
+    });
+    setTitle("");
+    setStart(new Date());
+    setEnd(new Date());
+    setRoom(0);
+    setName("");
+    setCourse("");
+    setGroup("");
     setIsOpen(false);
-  }
+  };
+
+  // Get the modal
+
   const Group = [
     { value: "Select Group", label: "Select Group" },
     { value: "CS-01", label: "CS-01" },
@@ -47,7 +61,7 @@ function Modal({ setIsOpen, AddEvent }) {
             <span>&times;</span>
           </button>
           <div className="modalContent">
-            <form action="submit" onSubmit={onSubmit}>
+            <form action="submit" onSubmit={handleSubmit}>
               <label htmlFor="Name" className="dataI">
                 Name
                 <input
@@ -55,7 +69,10 @@ function Modal({ setIsOpen, AddEvent }) {
                   name="Name"
                   id="Name"
                   placeholder="Title"
-                  onChange={(e) => setTitle(e.target.value)}
+                  onChange={(e) => {
+                    setTitle(e.target.value);
+                    // console.log(e.target.value);
+                  }}
                 />
               </label>
               <br />
@@ -136,8 +153,8 @@ function Modal({ setIsOpen, AddEvent }) {
               </button>
               <button
                 className="deleteBtn"
-                onClick={() => {
-                  AddEvent();
+                onClick={(e) => {
+                  handleSubmit(e);
                   setIsOpen(false);
                 }}
               >
