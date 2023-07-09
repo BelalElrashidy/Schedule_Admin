@@ -12,7 +12,11 @@ function Selector({ setIsOpen, data }) {
           </button>
           <div className="modalContent">
             {data.map((option) => (
-              <option key={option.value} value={option.value}>
+              <option
+                className="modal-groups"
+                key={option.value}
+                value={option.value}
+              >
                 {option.label}
               </option>
             ))}
