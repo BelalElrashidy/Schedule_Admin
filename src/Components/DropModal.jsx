@@ -13,7 +13,7 @@ function Selector({ setIsOpen, data }) {
           <div className="modalContent">
             {data.map((option) => (
               <option
-                className="modal-groups"
+                className="modal-group"
                 key={option.value}
                 value={option.value}
               >

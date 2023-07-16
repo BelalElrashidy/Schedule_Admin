@@ -8,60 +8,35 @@ import Modal from "./Components/modal.jsx";
 import { useState, useRef } from "react";
 import DropButton from "./Components/dropbutton.jsx";
 import Selector from "./Components/DropModal.jsx";
-import Datetime from "react-datetime";
 import moment from "moment";
-
-// function fetchDataFromCSV(file) {
-//   fetch(file)
-//     .then((response) => response.text())
-//     .then((csvText) => {
-//       const csvRows = csvText.split("\n");
-
-//       // Process each row
-//       csvRows.forEach((row) => {
-//         const columns = row.split(",");
-//         // Access each column value and perform desired operations
-//         console.log(columns);
-//       });
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching CSV file:", error);
-//     });
-// }
-
-// // Usage example
-// fetchDataFromCSV("SummerSchedule.csv");
-var events = [
-  {
-    title: "Math Analysis 2 Lecture",
-    startTime: "09:00:00",
-    endTime: "10:30:00",
-    backgroundColor: "#fdfffc",
-    textColor: "#000000",
-    borderColor: "#fdfffc",
-    daysOfWeek: ["2"],
-    startRecur: "2023-07-01",
-    endRecur: "2023-08-01",
-  },
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
 ];
+
 function App() {
-  // const event = () => {
-  //   return events;
-  // };
-  const [events, setEvents] = useState([
-    {
-      title: "Math Analysis 2 Lecture",
-      startTime: "09:00:00",
-      endTime: "10:30:00",
-      backgroundColor: "#fdfffc",
+  let data = require("./asset.json");
+
+  let new_arr = [];
+  for (let key in data) {
+    let ev = {
+      title: data[key].coursename + " - " + data[key].instructor,
+      start: data[key].date + "T" + data[key].from_time + ":00",
+      end: data[key].date + "T" + data[key].to_time + ":00",
+      backgroundColor: "#ffd131",
       textColor: "#000000",
       borderColor: "#fdfffc",
-      daysOfWeek: ["2"],
-      startRecur: "2023-07-01",
-      endRecur: "2023-08-01",
-    },
-  ]);
-  const CalendarRef = useRef(null);
+      group: data[key].subgroup,
+    };
+    new_arr.push(ev);
+  }
+
+  const [events, setEvents] = useState(new_arr);
 
   const Group = [
     { value: "Select Group", label: "Select Group" },
@@ -88,6 +63,13 @@ function App() {
   const [group, groupIsOpen] = useState(false);
   const [subject, subjectIsOpen] = useState(false);
   const [year, yearIsOpen] = useState(false);
+  const [G, setGroup] = useState("B22-CS-01");
+
+  function groupfilter(arr, query) {
+    return arr.filter((el) =>
+      el.toString().toLowerCase().includes(query.toLowerCase())
+    );
+  }
   function ModalOpen() {
     setIsOpen(true);
   }
@@ -101,40 +83,25 @@ function App() {
     subjectIsOpen(true);
   }
   const AddEvent = (event) => {
-    const updatedEvents = [
-      ...events,
-      {
-        title: event.title,
-        startTime:
-          moment(event.startTime).toDate().getHours() +
-          ":" +
-          moment(event.startTime).toDate().getMinutes() +
-          ":00",
-        endTime:
-          moment(event.endTime).toDate().getHours() +
-          ":" +
-          moment(event.endTime).toDate().getMinutes() +
-          ":00",
-        backgroundColor: "#fdfffc",
-        textColor: "#000000",
-        borderColor: "#fdfffc",
-        daysOfWeek: ["2"],
-        startRecur: "2023-07-01",
-        endRecur: "2023-08-01",
-      },
-    ];
-    console.log(updatedEvents);
+    const new_event = {
+      title: event.title + " - " + event.Name,
+      start: moment(event.start).toISOString().toString().split(".")[0],
+      end: moment(event.end).toISOString().toString().split(".")[0],
+      backgroundColor: "#ffd131",
+      textColor: "#ffffff",
+      borderColor: "#fdfffc",
+    };
+    const updatedEvents = [...events, new_event];
+    // console.log(updatedEvents);
 
-    setEvents((preEvents) => updatedEvents);
-    console.log(events);
-    // console.log(moment(event.endTime).toDate());
-    // console.log(
-    //   moment(event.startTime).toDate().getHours() +
-    //     ":" +
-    //     moment(event.startTime).toDate().getMinutes() +
-    //     ":00"
-    // );
+    setEvents(updatedEvents);
+    console.log(moment(event.startTime).toISOString().toString().split(".")[0]);
   };
+  function EditEvent(event) {
+    console.log(event.event.title);
+    const filtered = groupfilter(new_arr, G);
+    console.log(filtered);
+  }
 
   return (
     <>
@@ -174,7 +141,7 @@ function App() {
       </div>
       <div className="schedule">
         <h1>The Schedule</h1>
-        <Schedule events={events} CalendarRef={CalendarRef} />
+        <Schedule events={events} EditEvent={EditEvent} />
       </div>
       {isOpen && (
         <div id="MyModal">

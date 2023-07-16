@@ -1,7 +1,6 @@
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid"; // a plugin!
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
-import { useState, useRef } from "react";
 import "fullcalendar";
 
 // let events = [
@@ -16,40 +15,7 @@ import "fullcalendar";
 //   },
 // ];
 
-// let headerToolbars = {
-//   left: "prev,next",
-//   center: "title",
-//   right: "dayGridWeek,dayGridDay,WeekDay",
-// };
-// let views = {
-//   WeekDay: {
-//     type: "dayGrid",
-//     duration: { days: 5 },
-//   },
-// };
-// let slot = { slotDuration: "01:30" };
-
-// function Schedule() {
-//   return (
-//     <>
-//       <FullCalendar
-//         height={500}
-//         plugins={[dayGridPlugin]}
-//         initialView="dayGridWeek"
-//         viewClassNames="calendar"
-//         headerToolbar={headerToolbars}
-//         views={views}
-//         duration={{ default: "01:30" }}
-//         allDaySlot={false}
-//         events={events}
-//       />
-//     </>
-//   );
-// }
-
-// export default Schedule;
-
-function Schedule({ events }) {
+function Schedule({ events, EditEvent }) {
   let headerToolbars = {
     left: "prev,next",
     center: "title",
@@ -75,7 +41,7 @@ function Schedule({ events }) {
         // slotDuration={"01:30"}
         // slotDuration={"01:00"}
         height={500}
-        plugins={[timeGridPlugin]}
+        plugins={[timeGridPlugin, dayGridPlugin]}
         initialView="timeGridWeek"
         viewClassNames="calendar"
         headerToolbar={headerToolbars}
@@ -89,6 +55,9 @@ function Schedule({ events }) {
         nowIndicator={true}
         nowIndicatorClassNames={"now"}
         select={add}
+        eventClick={(event) => {
+          EditEvent(event);
+        }}
       />
     </>
   );

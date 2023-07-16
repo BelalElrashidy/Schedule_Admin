@@ -13,6 +13,7 @@ function Modal({ setIsOpen, AddEvent }) {
     e.preventDefault();
     AddEvent({
       title,
+      Name,
       start,
       end,
     });
@@ -103,11 +104,7 @@ function Modal({ setIsOpen, AddEvent }) {
               </div>
               <div className="dataI date">
                 <label htmlFor="">End Date</label>
-                <Datetime
-                  value={end}
-                  onChange={(date) => setEnd(date)}
-                  open={false}
-                />
+                <Datetime value={end} onChange={(date) => setEnd(date)} />
               </div>
               <label htmlFor="course" className="dataI">
                 Courses

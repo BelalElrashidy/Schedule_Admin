@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Table {
+  id Int @id @default(autoincrement())
+  courseName String @db.VarChar(255)
+  instructor String @db.VarChar(255)
+  room String @db.VarChar(255)
+  from_time String @db.VarChar(255)
+  to_time String @db.VarChar(255)
+  type String @db.VarChar(255)
+  date String @db.VarChar(255)
+  subgroup String @db.VarChar(255)
+  group_name String @db.VarChar(255)
+}
+// model POST {
+//   id Int @id @default(autoincrement())
+//   courseName String
+//   instructor String
+//   room String
+//   from_time String
+//   to_time String
+//   type String
+//   date String
+//   subgroup String
+//   group_name  String
+// }
