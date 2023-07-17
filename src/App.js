@@ -36,7 +36,7 @@ for (let key in data) {
     textColor: "#000000",
     borderColor: "#fdfffc",
     daysOfWeek: [days.indexOf(data[key].day) + 1],
-    startRecur: data[key].date,
+    startRecur: "2023-07-17",
     endRecur: "2023-08-10",
     group: data[key].subgroup_name,
     year: data[key].group_name,
