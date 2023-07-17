@@ -227,6 +227,7 @@ nav .bar button:hover {
   font-size: 14px;
   color: #2c3e50;
   text-align: center;
+  overflow: auto !important;
 }
 
 .modalActions {
@@ -335,5 +336,10 @@ nav .bar button:hover {
 
 .modal-group {
   background-color: #369b12;
-  margin-bottom: 20px;
+  color: white !important;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #ffd131;
+  cursor: pointer;
+  margin-bottom: 5px;
 }/*# sourceMappingURL=main.css.map */

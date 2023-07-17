@@ -15,7 +15,7 @@ import "fullcalendar";
 //   },
 // ];
 
-function Schedule({ events, EditEvent }) {
+function Schedule({ events }) {
   let headerToolbars = {
     left: "prev,next",
     center: "title",
@@ -55,9 +55,9 @@ function Schedule({ events, EditEvent }) {
         nowIndicator={true}
         nowIndicatorClassNames={"now"}
         select={add}
-        eventClick={(event) => {
-          EditEvent(event);
-        }}
+        // eventClick={(event) => {
+        //   EditEvent(event);
+        // }}
       />
     </>
   );

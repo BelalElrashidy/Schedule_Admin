@@ -9,6 +9,7 @@ import { useState, useRef } from "react";
 import DropButton from "./Components/dropbutton.jsx";
 import Selector from "./Components/DropModal.jsx";
 import moment from "moment";
+
 const days = [
   "Monday",
   "Tuesday",
@@ -23,53 +24,87 @@ function App() {
   let data = require("./asset.json");
 
   let new_arr = [];
+  let incr = 0;
   for (let key in data) {
     let ev = {
+      id: Number,
       title: data[key].coursename + " - " + data[key].instructor,
-      start: data[key].date + "T" + data[key].from_time + ":00",
-      end: data[key].date + "T" + data[key].to_time + ":00",
+      startTime: data[key].from_time + ":00",
+      end: data[key].to_time + ":00",
       backgroundColor: "#ffd131",
       textColor: "#000000",
       borderColor: "#fdfffc",
-      group: data[key].subgroup,
+      daysOfWeek: [days.indexOf(data[key].day) + 1],
+      startRecur: data[key].date,
+      endRecur: "2023-08-10",
+      group: data[key].subgroup_name,
+      year: data[key].group_name,
     };
+    ev.id = incr++;
     new_arr.push(ev);
   }
 
   const [events, setEvents] = useState(new_arr);
 
-  const Group = [
+  const Group1 = [
     { value: "Select Group", label: "Select Group" },
-    { value: "CS-01", label: "CS-01" },
-    { value: "CS-02", label: "CS-02" },
-    { value: "CS-03", label: "CS-03" },
-    { value: "CS-04", label: "CS-04" },
-    { value: "CS-05", label: "CS-05" },
-    { value: "CS-06", label: "CS-06" },
-    { value: "DSAI-01", label: "DSAI-01" },
-    { value: "DSAI-02", label: "DSAI-02" },
-    { value: "DSAI-03", label: "DSAI-03" },
-    { value: "DSAI-04", label: "DSAI-04" },
+    { value: "B22-CS-01", label: "B22-CS-01" },
+    { value: "B22-CS-02", label: "B22-CS-02" },
+    { value: "B22-CS-03", label: "B22-CS-03" },
+    { value: "B22-CS-04", label: "B22-CS-04" },
+    { value: "B22-CS-05", label: "B22-CS-05" },
+    { value: "B22-CS-06", label: "B22-CS-06" },
+    { value: "B22-DSAI-01", label: "B22-DSAI-01" },
+    { value: "B22-DSAI-02", label: "B22-DSAI-02" },
+    { value: "B22-DSAI-03", label: "B22-DSAI-03" },
+    { value: "B22-DSAI-04", label: "B22-DSAI-04" },
+  ];
+  const Group2 = [
+    { value: "Select Group", label: "Select Group" },
+    { value: "В21-SD-01", label: "В21-SD-01" },
+    { value: "В21-SD-02", label: "В21-SD-02" },
+    { value: "В21-SD-03", label: "В21-SD-03" },
+    { value: "В21-CS-01", label: "В21-CS-01" },
+    { value: "В21-DS-01", label: "В21-DS-01" },
+    { value: "В21-DS-02", label: "В21-DS-02" },
+    { value: "В21-AI-01", label: "В21-AI-01" },
+    { value: "В21-RO-01", label: "В21-RO-01" },
   ];
   const Year = [
-    { value: "Select year", label: "Select year" },
-    { value: "B22", label: "B22" },
-    { value: "B21", label: "B21" },
-    { value: "B20", label: "B20" },
-    { value: "B219", label: "B19" },
+    { value: "Select Year", label: "Select year" },
+    { value: "BS - Year 1", label: "BS - Year 1" },
+    { value: "BS - Year 2", label: "BS - Year 2" },
+    // { value: "B20", label: "B20" },
+    // { value: "B219", label: "B19" },
   ];
-  const Course = [];
+  let Group = [];
   const [isOpen, setIsOpen] = useState(false);
   const [group, groupIsOpen] = useState(false);
-  const [subject, subjectIsOpen] = useState(false);
   const [year, yearIsOpen] = useState(false);
-  const [G, setGroup] = useState("B22-CS-01");
-
-  function groupfilter(arr, query) {
-    return arr.filter((el) =>
-      el.toString().toLowerCase().includes(query.toLowerCase())
-    );
+  const [G, setGroup] = useState("Select Group");
+  const [Y, setYear] = useState("Select Year");
+  if (Y === "BS - Year 1") {
+    Group = Group1;
+  } else if (Y === "BS - Year 2") {
+    Group = Group2;
+  } else {
+    Group = [{ value: "Select Year", label: "Select year" }];
   }
+  function groupfilter(item) {
+    if (G === "Select Group") return true;
+    if (item.group === G) {
+      return true;
+    }
+    return false;
+  }
+  function yearfilter(item) {
+    if (Y === "Select Year") return true;
+    if (item.year === Y) {
+      return true;
+    }
+    return false;
+  }
+
   function ModalOpen() {
     setIsOpen(true);
   }
@@ -79,9 +114,7 @@ function App() {
   function GroupOpen() {
     groupIsOpen(true);
   }
-  function SubjectOpen() {
-    subjectIsOpen(true);
-  }
+
   const AddEvent = (event) => {
     const new_event = {
       title: event.title + " - " + event.Name,
@@ -92,17 +125,16 @@ function App() {
       borderColor: "#fdfffc",
     };
     const updatedEvents = [...events, new_event];
-    // console.log(updatedEvents);
-
     setEvents(updatedEvents);
-    console.log(moment(event.startTime).toISOString().toString().split(".")[0]);
   };
-  function EditEvent(event) {
-    console.log(event.event.title);
-    const filtered = groupfilter(new_arr, G);
-    console.log(filtered);
+  function GetEventsByGroup() {
+    const filtered = new_arr.filter(groupfilter);
+    setEvents(filtered);
   }
-
+  function GetEventsByYear() {
+    const filtered = new_arr.filter(yearfilter);
+    setEvents(filtered);
+  }
   return (
     <>
       <Header />
@@ -116,32 +148,27 @@ function App() {
       </div>
       <div className="selections">
         <div>
+          <DropButton text={Y} size="large" data={Year} setIsOpen={YearOpen} />
           <DropButton
-            text="Select Year"
-            size="large"
-            data={Year}
-            setIsOpen={YearOpen}
-          />
-          <DropButton
-            text="Select subject"
+            text={G}
             size="large"
             data={group}
-            setIsOpen={SubjectOpen}
-          />
-        </div>
-        <div className="second">
-          <DropButton
-            text="Select group"
-            size="large"
-            data={Course}
             setIsOpen={GroupOpen}
           />
-          {/* <button>Notify Students Now</button> */}
         </div>
+        {/* <div className="second">
+          <DropButton
+            text="Select Subject"
+            size="large"
+            data={Course}
+            setIsOpen={SubjectOpen}
+          />
+          <button>Notify Students Now</button>
+        </div> */}
       </div>
       <div className="schedule">
         <h1>The Schedule</h1>
-        <Schedule events={events} EditEvent={EditEvent} />
+        <Schedule events={events} />
       </div>
       {isOpen && (
         <div id="MyModal">
@@ -150,19 +177,29 @@ function App() {
       )}
       {year && (
         <div id="MyModal">
-          <Selector setIsOpen={yearIsOpen} data={Year} />
+          <Selector
+            setIsOpen={yearIsOpen}
+            data={Year}
+            setGroup={setYear}
+            filter={GetEventsByYear}
+          />
         </div>
       )}
       {group && (
         <div id="MyModal">
-          <Selector setIsOpen={groupIsOpen} data={Group} />
+          <Selector
+            setIsOpen={groupIsOpen}
+            setGroup={setGroup}
+            filter={GetEventsByGroup}
+            data={Group}
+          />
         </div>
       )}
-      {subject && (
+      {/* {subject && (
         <div id="MyModal">
           <Selector setIsOpen={subjectIsOpen} data={Course} />
         </div>
-      )}
+      )} */}
     </>
   );
 }

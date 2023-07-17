@@ -48,6 +48,7 @@
   font-size: 14px;
   color: #2c3e50;
   text-align: center;
+  overflow: auto !important;
 }
 
 .modalActions {
@@ -163,5 +164,10 @@
 
 .modal-group {
   background-color: $button;
-  margin-bottom: 20px;
+  color: white !important;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid $border;
+  cursor: pointer;
+  margin-bottom: 5px;
 }

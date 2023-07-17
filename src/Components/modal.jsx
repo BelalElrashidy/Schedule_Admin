@@ -16,6 +16,9 @@ function Modal({ setIsOpen, AddEvent }) {
       Name,
       start,
       end,
+      course,
+      group,
+      room,
     });
     setTitle("");
     setStart(new Date());
@@ -31,23 +34,24 @@ function Modal({ setIsOpen, AddEvent }) {
 
   const Group = [
     { value: "Select Group", label: "Select Group" },
-    { value: "CS-01", label: "CS-01" },
-    { value: "CS-02", label: "CS-02" },
-    { value: "CS-03", label: "CS-03" },
-    { value: "CS-04", label: "CS-04" },
-    { value: "CS-05", label: "CS-05" },
-    { value: "CS-06", label: "CS-06" },
-    { value: "DSAI-01", label: "DSAI-01" },
-    { value: "DSAI-02", label: "DSAI-02" },
-    { value: "DSAI-03", label: "DSAI-03" },
-    { value: "DSAI-04", label: "DSAI-04" },
+    { value: "B22-CS-01", label: "B22-CS-01" },
+    { value: "B22-CS-02", label: "B22-CS-02" },
+    { value: "B22-CS-03", label: "B22-CS-03" },
+    { value: "B22-CS-04", label: "B22-CS-04" },
+    { value: "B22-CS-05", label: "B22-CS-05" },
+    { value: "B22-CS-06", label: "B22-CS-06" },
+    { value: "B22-DSAI-01", label: "B22-DSAI-01" },
+    { value: "B22-DSAI-02", label: "B22-DSAI-02" },
+    { value: "B22-DSAI-03", label: "B22-DSAI-03" },
+    { value: "B22-DSAI-04", label: "B22-DSAI-04" },
   ];
+
   const Courses = [
-    { value: "Select year", label: "Select year" },
-    { value: "B22", label: "B22" },
-    { value: "B21", label: "B21" },
-    { value: "B20", label: "B20" },
-    { value: "B219", label: "B19" },
+    { value: "Select Year", label: "Select year" },
+    { value: "BS - Year 1", label: "BS - Year 1" },
+    { value: "BS - Year 2", label: "BS - Year 2" },
+    // { value: "B20", label: "B20" },
+    // { value: "B219", label: "B19" },
   ];
 
   return (
@@ -98,10 +102,12 @@ function Modal({ setIsOpen, AddEvent }) {
                   onChange={(e) => setRoom(e.target.value)}
                 />
               </label>
+              <br />
               <div className="dataI date">
                 <label htmlFor="">Start Date</label>
                 <Datetime value={start} onChange={(date) => setStart(date)} />
               </div>
+              <br />
               <div className="dataI date">
                 <label htmlFor="">End Date</label>
                 <Datetime value={end} onChange={(date) => setEnd(date)} />

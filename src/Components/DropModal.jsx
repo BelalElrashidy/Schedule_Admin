@@ -1,24 +1,28 @@
-function Selector({ setIsOpen, data }) {
+function Selector({ setIsOpen, setGroup, filter, data }) {
   return (
     <>
       <div className="darkBG" onClick={() => setIsOpen(false)} />
       <div className="centered">
         <div className="modal">
           <div className="modalHeader">
-            <h5 className="heading">Add Event</h5>
+            <h5 className="heading">{data[0].value}</h5>
           </div>
           <button className="closeBtn" onClick={() => setIsOpen(false)}>
             <span>&times;</span>
           </button>
           <div className="modalContent">
             {data.map((option) => (
-              <option
+              <div
                 className="modal-group"
                 key={option.value}
                 value={option.value}
+                onClick={() => {
+                  setGroup(option.value);
+                  filter();
+                }}
               >
                 {option.label}
-              </option>
+              </div>
             ))}
           </div>
           <div className="modalActions">
@@ -31,7 +35,12 @@ function Selector({ setIsOpen, data }) {
               >
                 Cancel
               </button>
-              <button className="deleteBtn" onClick={() => setIsOpen(false)}>
+              <button
+                className="deleteBtn"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+              >
                 Save
               </button>
             </div>
