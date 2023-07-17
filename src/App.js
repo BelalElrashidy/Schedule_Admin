@@ -5,7 +5,7 @@ import Schedule from "./Components/schedule.jsx";
 import "./assets/css/main.css";
 import "react-datetime/css/react-datetime.css";
 import Modal from "./Components/modal.jsx";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import DropButton from "./Components/dropbutton.jsx";
 import Selector from "./Components/DropModal.jsx";
 import moment from "moment";
@@ -19,31 +19,36 @@ const days = [
   "Saturday",
   "Sunday",
 ];
-
+let new_arr = [];
+const fs = require("fs");
+let data = require("./asset.json");
+let incr = 0;
+for (let key in data) {
+  let ev = {
+    id: Number,
+    title:
+      data[key].coursename +
+      " - " +
+      data[key].instructor +
+      " - " +
+      data[key].type +
+      " - " +
+      data[key].room,
+    startTime: data[key].from_time + ":00",
+    endTime: data[key].to_time + ":00",
+    backgroundColor: "#ffd131",
+    textColor: "#000000",
+    borderColor: "#fdfffc",
+    daysOfWeek: [days.indexOf(data[key].day) + 1],
+    startRecur: data[key].date,
+    endRecur: "2023-08-10",
+    group: data[key].subgroup_name,
+    year: data[key].group_name,
+  };
+  ev.id = incr++;
+  new_arr.push(ev);
+}
 function App() {
-  let data = require("./asset.json");
-
-  let new_arr = [];
-  let incr = 0;
-  for (let key in data) {
-    let ev = {
-      id: Number,
-      title: data[key].coursename + " - " + data[key].instructor,
-      startTime: data[key].from_time + ":00",
-      end: data[key].to_time + ":00",
-      backgroundColor: "#ffd131",
-      textColor: "#000000",
-      borderColor: "#fdfffc",
-      daysOfWeek: [days.indexOf(data[key].day) + 1],
-      startRecur: data[key].date,
-      endRecur: "2023-08-10",
-      group: data[key].subgroup_name,
-      year: data[key].group_name,
-    };
-    ev.id = incr++;
-    new_arr.push(ev);
-  }
-
   const [events, setEvents] = useState(new_arr);
 
   const Group1 = [
@@ -74,8 +79,6 @@ function App() {
     { value: "Select Year", label: "Select year" },
     { value: "BS - Year 1", label: "BS - Year 1" },
     { value: "BS - Year 2", label: "BS - Year 2" },
-    // { value: "B20", label: "B20" },
-    // { value: "B219", label: "B19" },
   ];
   let Group = [];
   const [isOpen, setIsOpen] = useState(false);
@@ -117,21 +120,24 @@ function App() {
 
   const AddEvent = (event) => {
     const new_event = {
-      title: event.title + " - " + event.Name,
-      start: moment(event.start).toISOString().toString().split(".")[0],
+      title: event.title + " - " + event.Name + " - " + event.room,
+      start: moment(event.start).toISOString(false).toString().split(".")[0],
       end: moment(event.end).toISOString().toString().split(".")[0],
+      group: event.group,
+      year: event.course,
       backgroundColor: "#ffd131",
-      textColor: "#ffffff",
+      textColor: "#000000",
       borderColor: "#fdfffc",
     };
-    const updatedEvents = [...events, new_event];
-    setEvents(updatedEvents);
+    new_arr.push(new_event);
+    setEvents(new_arr);
   };
   function GetEventsByGroup() {
     const filtered = new_arr.filter(groupfilter);
     setEvents(filtered);
   }
   function GetEventsByYear() {
+    console.log(new_arr);
     const filtered = new_arr.filter(yearfilter);
     setEvents(filtered);
   }
