@@ -1,5 +1,4 @@
 import Header from "./Components/Header.jsx";
-// import Componetns from "./Components/ScheduleComponent.jsx";
 import Button from "./Components/buttons.jsx";
 import Schedule from "./Components/schedule.jsx";
 import "./assets/css/main.css";
@@ -20,12 +19,9 @@ const days = [
   "Sunday",
 ];
 let new_arr = [];
-const fs = require("fs");
 let data = require("./asset.json");
-let incr = 0;
 for (let key in data) {
   let ev = {
-    id: Number,
     title:
       data[key].coursename +
       " - " +
@@ -45,7 +41,6 @@ for (let key in data) {
     group: data[key].subgroup_name,
     year: data[key].group_name,
   };
-  ev.id = incr++;
   new_arr.push(ev);
 }
 function App() {
@@ -120,7 +115,14 @@ function App() {
 
   const AddEvent = (event) => {
     const new_event = {
-      title: event.title + " - " + event.Name + " - " + event.room,
+      title:
+        event.title +
+        " - " +
+        event.Name +
+        " - " +
+        event.type +
+        " - " +
+        event.room,
       start: moment(event.start).toISOString(false).toString().split(".")[0],
       end: moment(event.end).toISOString().toString().split(".")[0],
       group: event.group,
@@ -162,15 +164,6 @@ function App() {
             setIsOpen={GroupOpen}
           />
         </div>
-        {/* <div className="second">
-          <DropButton
-            text="Select Subject"
-            size="large"
-            data={Course}
-            setIsOpen={SubjectOpen}
-          />
-          <button>Notify Students Now</button>
-        </div> */}
       </div>
       <div className="schedule">
         <h1>The Schedule</h1>
@@ -201,11 +194,6 @@ function App() {
           />
         </div>
       )}
-      {/* {subject && (
-        <div id="MyModal">
-          <Selector setIsOpen={subjectIsOpen} data={Course} />
-        </div>
-      )} */}
     </>
   );
 }

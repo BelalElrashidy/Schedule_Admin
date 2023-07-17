@@ -8,6 +8,7 @@ function Modal({ setIsOpen, AddEvent }) {
   const [Name, setName] = useState("");
   const [course, setCourse] = useState("");
   const [group, setGroup] = useState("");
+  const [type, setType] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ function Modal({ setIsOpen, AddEvent }) {
       course,
       group,
       room,
+      type,
     });
     setTitle("");
     setStart(new Date());
@@ -32,7 +34,7 @@ function Modal({ setIsOpen, AddEvent }) {
 
   // Get the modal
 
-  const Group = [
+  const Group1 = [
     { value: "Select Group", label: "Select Group" },
     { value: "B22-CS-01", label: "B22-CS-01" },
     { value: "B22-CS-02", label: "B22-CS-02" },
@@ -45,13 +47,37 @@ function Modal({ setIsOpen, AddEvent }) {
     { value: "B22-DSAI-03", label: "B22-DSAI-03" },
     { value: "B22-DSAI-04", label: "B22-DSAI-04" },
   ];
+  const Group2 = [
+    { value: "Select Group", label: "Select Group" },
+    { value: "В21-SD-01", label: "В21-SD-01" },
+    { value: "В21-SD-02", label: "В21-SD-02" },
+    { value: "В21-SD-03", label: "В21-SD-03" },
+    { value: "В21-CS-01", label: "В21-CS-01" },
+    { value: "В21-DS-01", label: "В21-DS-01" },
+    { value: "В21-DS-02", label: "В21-DS-02" },
+    { value: "В21-AI-01", label: "В21-AI-01" },
+    { value: "В21-RO-01", label: "В21-RO-01" },
+  ];
+
+  let Group = [];
+
+  if (course === "BS - Year 1") {
+    Group = Group1;
+  } else if (course === "BS - Year 2") {
+    Group = Group2;
+  } else {
+    Group = [{ value: "Select Year", label: "Select year" }];
+  }
 
   const Courses = [
     { value: "Select Year", label: "Select year" },
     { value: "BS - Year 1", label: "BS - Year 1" },
     { value: "BS - Year 2", label: "BS - Year 2" },
-    // { value: "B20", label: "B20" },
-    // { value: "B219", label: "B19" },
+  ];
+  const Types = [
+    { value: "lab", label: "Lab" },
+    { value: "lec", label: "Lecture" },
+    { value: "Tut", label: "Tutorial" },
   ];
 
   return (
@@ -76,7 +102,6 @@ function Modal({ setIsOpen, AddEvent }) {
                   placeholder="Title"
                   onChange={(e) => {
                     setTitle(e.target.value);
-                    // console.log(e.target.value);
                   }}
                 />
               </label>
@@ -101,6 +126,23 @@ function Modal({ setIsOpen, AddEvent }) {
                   placeholder="Room Number"
                   onChange={(e) => setRoom(e.target.value)}
                 />
+              </label>
+              <br />
+              <label htmlFor="course" className="dataI">
+                Type
+                <select
+                  defaultValue={("Select a Course", "Select")}
+                  name="course"
+                  className="course"
+                  placeholder="Select Type"
+                  onChange={(e) => setType(e.target.value)}
+                >
+                  {Types.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
               </label>
               <br />
               <div className="dataI date">
