@@ -47,7 +47,7 @@ function App() {
   const [events, setEvents] = useState(new_arr);
 
   const Group1 = [
-    { value: "Select Group", label: "Select Group" },
+    { value: "All", label: "All" },
     { value: "B22-CS-01", label: "B22-CS-01" },
     { value: "B22-CS-02", label: "B22-CS-02" },
     { value: "B22-CS-03", label: "B22-CS-03" },
@@ -60,7 +60,7 @@ function App() {
     { value: "B22-DSAI-04", label: "B22-DSAI-04" },
   ];
   const Group2 = [
-    { value: "Select Group", label: "Select Group" },
+    { value: "All", label: "All" },
     { value: "В21-SD-01", label: "В21-SD-01" },
     { value: "В21-SD-02", label: "В21-SD-02" },
     { value: "В21-SD-03", label: "В21-SD-03" },
@@ -71,7 +71,7 @@ function App() {
     { value: "В21-RO-01", label: "В21-RO-01" },
   ];
   const Year = [
-    { value: "Select Year", label: "Select year" },
+    { value: "All", label: "All" },
     { value: "BS - Year 1", label: "BS - Year 1" },
     { value: "BS - Year 2", label: "BS - Year 2" },
   ];
@@ -80,7 +80,7 @@ function App() {
   const [group, groupIsOpen] = useState(false);
   const [year, yearIsOpen] = useState(false);
   const [G, setGroup] = useState("Select Group");
-  const [Y, setYear] = useState("Select Year");
+  const [Y, setYear] = useState("Select year");
   if (Y === "BS - Year 1") {
     Group = Group1;
   } else if (Y === "BS - Year 2") {
@@ -89,14 +89,14 @@ function App() {
     Group = [{ value: "Select Year", label: "Select year" }];
   }
   function groupfilter(item) {
-    if (G === "Select Group") return true;
+    if (G === "All") return true;
     if (item.group === G) {
       return true;
     }
     return false;
   }
   function yearfilter(item) {
-    if (Y === "Select Year") return true;
+    if (Y === "All") return true;
     if (item.year === Y) {
       return true;
     }
